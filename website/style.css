@@ -62,6 +62,10 @@ button {
     box-shadow: 2px 4px 5px #444;
 }
 
+button:hover {
+    background-color: #22b2da;
+}
+
 h1 {
     font-size: 36px;
 }
