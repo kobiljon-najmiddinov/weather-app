@@ -1,5 +1,5 @@
 //Empty object for end route
-projectData = [];
+projectData = {};
 
 //Initilization of express
 const express = require('express');
