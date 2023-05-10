@@ -1,7 +1,6 @@
 body {
     background: #90e0ef;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-
 }
 
 #app {
@@ -43,7 +42,6 @@ body {
 .headline {
     font-size: 2em;
     text-align: center;
-    /* height: 400px; */
 }
 
 .title {
