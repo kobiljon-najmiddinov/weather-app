@@ -34,10 +34,6 @@ function retriveData(req, res) {
     console.log("Get route respond:", projectData)
     res.send(projectData);
 }
-
-//POST route to add incoming data to projectData object
-//Data to be added: temperature, date, user response
-
 app.post('/data', addEntry);
 
 function addEntry(req, res) {
@@ -47,9 +43,7 @@ function addEntry(req, res) {
         content: req.body.content,
     }
 
-    // projectData.push(req.body.temp);
-
-
+    projectData = newEntry; //Storing Entry data to projectData
     res.send(projectData);
     console.log("Post pushed to data: ", projectData);
 }

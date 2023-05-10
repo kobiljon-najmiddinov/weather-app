@@ -1,6 +1,7 @@
 body {
     background: #fffff8;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
 }
 
 #app {
@@ -16,7 +17,10 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-.holder {}
+.holder {
+    font-size: 18px;
+    margin-top: 15px;
+}
 
 .entry {
     background: rgba(59, 74, 107, .4);
@@ -30,14 +34,19 @@ body {
 
 #content {}
 
-.headline {}
+.headline {
+    font-size: 2em;
+    text-align: center;
+}
 
-.title {}
+.title {
+    font-size: ;
+}
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label {
     display: block;
-    font-size: 27px;
+    font-size: 1.4em;
 }
 
 input {
