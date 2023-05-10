@@ -2,10 +2,6 @@
 let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip='
 let apiKey = '&appid=49266a5fe8b0cb23df71915236165822';
 
-
-
-
-
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear();
@@ -22,7 +18,6 @@ const getWeather = async (baseURL, zip, apiKey) => {
     } catch (error) {
         alert("Zip code does not exists!");
     }
-
 }
 
 document.getElementById('generate').addEventListener('click', weatherData);
@@ -50,7 +45,6 @@ function weatherData(e) {
     }
 
 }
-
 
 // Async POST request to add API data with chaining(.then)
 // can change 'postWeather' to 'postData'
