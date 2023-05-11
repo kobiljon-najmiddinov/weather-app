@@ -1,6 +1,7 @@
 /* Global Variables */
 let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip='
-const apiKey = '<your_api-key>';
+
+const apiKey = '&appid=<your_api_key>&units=metric'; //Celsius
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -71,12 +72,9 @@ const updateUI = async () => {
     try {
         const allData = await request.json()
 
-        // COnverting the Temperature from Kelvin to Celsius
-        tempCelsius = (allData.temp - 273.15).toFixed(1);
-
         //Updating using innerHTML
         document.getElementById('date').innerHTML = "Date: " + allData.date;
-        document.getElementById('temp').innerHTML = "Temperature: " + tempCelsius + "℃";
+        document.getElementById('temp').innerHTML = "Temperature: " + allData.temp + " ℃";
         document.getElementById('content').innerHTML = allData.content;
         document.getElementById('content').setHTML("Feelings: " + allData.content, sanitizer); //Sanitizer to prevent cross-site-scripting
 
