@@ -3,6 +3,7 @@ let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip='
 
 const apiKey = '&appid=<your_api_key>&units=imperial'; //Fahrenheit
 
+
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear();
@@ -34,6 +35,9 @@ function weatherData(e) {
     if (zipCode === "" & feel === "") { //Error handling, user can't Generate without entering the Zip and Feeling
         alert('Enter Zip Code and Feeling');
     }
+    else if (isNaN(zipCode) === true) {
+        alert('Enter Number to Zipcode');
+    }
     else {
         getWeather(baseURL, zipCode, apiKey)
             //Chain Promise
@@ -42,6 +46,7 @@ function weatherData(e) {
 
                 //Dynamicly Updates the UI using innerHTML
                 updateUI();
+
             });
     }
 
@@ -82,3 +87,4 @@ const updateUI = async () => {
         console.log('Could not Update the UI');
     }
 }
+
