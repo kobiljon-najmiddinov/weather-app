@@ -1,7 +1,11 @@
+require('dotenv').config();
+
+
+
 /* Global Variables */
 let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip='
 
-const apiKey = '&appid=<your_api_key>&units=imperial'; //Fahrenheit
+const apiKey = `&appid=${process.env.API_KEY}&units=imperial`; //Fahrenheit
 
 
 // Create a new date instance dynamically with JS
