@@ -30,7 +30,7 @@ document.getElementById('generate').addEventListener('click', weatherData);
 // Added sanitizer to prevent XSS(Cross-Site-Scripting) Attacks 
 // which can cause hikacking the User credentionls 
 // As an example you can enter this payload to 2nd field: <a href="javascript:alert(1)"></a>
-const sanitizer = new Sanitizer()
+// const sanitizer = new Sanitizer()
 
 function weatherData(e) {
     const zipCode = document.getElementById('zip').value;
@@ -85,7 +85,7 @@ const updateUI = async () => {
         document.getElementById('date').innerHTML = "Date: " + allData.date;
         document.getElementById('temp').innerHTML = "Temperature: " + allData.temp + " ℉";
         document.getElementById('content').innerHTML = allData.content;
-        document.getElementById('content').setHTML("Feelings: " + allData.content, sanitizer); //Sanitizer to prevent cross-site-scripting
+        document.getElementById('content').setHTML("Feelings: " + allData.content); //Sanitizer to prevent cross-site-scripting
 
     } catch (error) {
         console.log('Could not Update the UI');
