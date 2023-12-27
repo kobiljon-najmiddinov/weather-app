@@ -1,6 +1,6 @@
-require('dotenv').config();
+require('dotenv').config()
 
-
+console.log(process.env.API_KEY);
 
 /* Global Variables */
 let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip='
